@@ -1,6 +1,6 @@
-// esta clase se encargara de llamar de rick & morty para obtener todos los datos
+// esta clase se encargará de llamar de rick & morty para obtener todos los datos
 // el servicio tiene como endpoint de accesso https://rickandmortyapi.com/api/character
-// que tiene  como respuesta el siguiente json 
+// que tiene como respuesta el siguiente json
 
 // {
 //     "info": {
@@ -45,8 +45,9 @@ class RickAndMortyService {
 	constructor() {}
 
     
-    // este metodo debera llamar al servicio y obtener los personajes 
-    // debera devolver un objeto de la siguiente manera 
+    // este método deberá llamar al servicio y obtener los personajes
+    // deberá devolver un objeto de la siguiente manera
+
     // {
     //     "name": "Rick Sanchez",
     //     "status": "Alive",
@@ -58,9 +59,8 @@ class RickAndMortyService {
     //     "code": "aqui va el codigo del estudiante"
     // }
 
-    // debera realizar el respectivo manejo de error en caso de errores al llamar el API
-
-    // se recomienta usar el api fetch para obtener los datos como en el siguiente ejemplo
+    // deberá realizar el respectivo manejo de error en caso de errores al llamar el API
+    // se recomienda usar el api fetch para obtener los datos como en el siguiente ejemplo  
 
     // ejemplo con promesas
 
