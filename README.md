@@ -1,4 +1,4 @@
-# Parcial Primer Corte Desarrollo Web con React js 🚀
+# Parcial Primer Corte Desarrollo Web 🚀
 
 
 Este parcial consiste en realizar una página web usando únicamente HTML,CSS y JS,
@@ -12,7 +12,7 @@ Para obtener los datos de la vista deberás consumir un API a través de un serv
 en en el archivo [service.js](./src/service.js).
 
 
-Lo siguiente será acceder al DOM y crear la vista de acuerdo a los descrito en [index.js](./src/index.js),
+Lo siguiente será acceder al DOM y crear la vista de acuerdo a lo descrito en [index.js](./src/index.js),
 todos los estilos relacionados al ejercicio deberán estar en el siguiente archivo [index.css](./src/index.css).
 
 
