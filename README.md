@@ -55,19 +55,22 @@ Una vez terminado el ejercicio se debe subir a un repositorio creado por ti y ag
 como colaborador como se indica [aquí](https://docs.github.com/es/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository)
 
 
-Se evaluaran los siguientes aspectos
+Se evaluaran los siguientes aspectos:
 
 
 1. HTML (1 punto)
-*correcto uso de las etiquetas
-*correcto uso de la semántica
-*correcto uso de las propiedades
+     * correcto uso de las etiquetas
+     * correcto uso de la semántica
+     * correcto uso de las propiedades
+      
 2. CSS (2 puntos)
-*correcto nombramiento de las clases
-*parecido con el diseño requerido
-*responsive design (puntos extra)
+     * correcto nombramiento de las clases
+     * parecido con el diseño requerido
+     * responsive design (puntos extra)
+       
 3. JS (2 puntos)
-*implementación de clases y objetos
-*manejo de las promesas o funciones asíncronas
-*manejo uso de eventos
-*acceso al DOM
+     * implementación de clases y objetos
+     * manejo de las promesas o funciones asíncronas
+     * manejo uso de eventos
+     * acceso al DOM
+
