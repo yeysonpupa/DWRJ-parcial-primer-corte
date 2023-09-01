@@ -22,13 +22,13 @@ service.getAllCharacters()
 // valor (1 punto)
 
 function createCharacterList() {
-    const characterList = document.querySelector('.character-list'); // Asegúrate de tener un elemento con la clase 'container' en tu HTML
+    const character_list = document.querySelector('.character-list');
     service.getAllCharacters()
         .then(characters => {
             characters.forEach(character => {
-                const characterCard = createCharacterCard(character);
-                characterList.innerHTML += characterCard;
-                addCharacterListeners(character);
+                const Card = createCharacterCard(character);
+                character_list.innerHTML += Card;
+                addCharacterListeners(character, character_list);
             });
         })
         .catch(error => {
@@ -50,12 +50,13 @@ function createCharacterList() {
 function createCharacterCard(character) {
     return `
         <div class="character">
-            <img src="${character.image}" alt="${character.name}">
-            <span>Name: ${character.name}</span>
-            <span>Status: ${character.status}</span>
-            <span>Species: ${character.species}</span>
-            <span>First Seen: ${character.firstSeen}</span>
-            <span>Location: ${character.location}</span>
+            <img class="character-image" src="${character.image}" alt="${character.name}">
+            <div class="character-data">
+                <p class="character-name">${character.name}</p>
+                <p class="character-status-species">${character.status} - ${character.species}</p>
+                <p class="character-location"> <span>Last known location:<br></span> ${character.location}</p>
+                <p class="character-seen"><span>First Seen in:<br></span> ${character.firstSeen}</p>
+            </div>
         </div>
     `;
 }
@@ -64,8 +65,11 @@ function createCharacterCard(character) {
 // cuando se seleccione un personaje debe decir hola soy 'nombre personaje', recuerda que puedes obtener
 // el elemento target de un evento y así obtener sus propiedades
 
-function addCharacterListeners(character) {}
-
+function addCharacterListeners(character, character_list) {
+    character_list.addEventListener('click', () => {
+        alert(`Hola, soy ${character.name}`);
+    });
+}
 
 // por último se llama la función y se renderiza la vista
 createCharacterList();

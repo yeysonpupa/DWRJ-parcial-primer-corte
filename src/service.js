@@ -80,13 +80,13 @@ class RickAndMortyService {
     // valor (1 punto)
 	async getAllCharacters() {
         return fetch(this.API_Personajes)
-            .then(respuesta => {
+            .then((respuesta) => {
                 if (!respuesta.ok) {
                     console.error('Ha ocurrido un error:');
                 }
                 return respuesta.json();
             })
-            .then(data => {
+            .then((data) => {
                 const characters = data.results.map(character => ({
                     name: character.name,
                     status: character.status,
