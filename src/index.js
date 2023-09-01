@@ -1,5 +1,15 @@
 import RickAndMortyService from './service';
 
+const service = new RickAndMortyService();
+
+service.getAllCharacters()
+    .then(characters => {
+        console.log(characters);
+    })
+    .catch(error => {
+        console.error('Ha ocurrido un error:', error);
+    });
+
 
 // acá deberás crear una instancia del servicio RickAndMortyService
 // const service = new RickAndMortyService();
@@ -12,8 +22,18 @@ import RickAndMortyService from './service';
 // valor (1 punto)
 
 function createCharacterList() {
-    // llamar primero createCharacterCard(character);
-    // llamar segundo addCharacterListeners(character);
+    const characterList = document.querySelector('.character-list'); // Asegúrate de tener un elemento con la clase 'container' en tu HTML
+    service.getAllCharacters()
+        .then(characters => {
+            characters.forEach(character => {
+                const characterCard = createCharacterCard(character);
+                characterList.innerHTML += characterCard;
+                addCharacterListeners(character);
+            });
+        })
+        .catch(error => {
+            console.error('Ha ocurrido un error:', error);
+        });
 }
 
 // esta función debe devolver la estructura html en string de tu personaje ejemplo
@@ -27,7 +47,18 @@ function createCharacterList() {
 
 // valor (1 punto) HTML
 
-function createCharacterCard(character) {}
+function createCharacterCard(character) {
+    return `
+        <div class="character">
+            <img src="${character.image}" alt="${character.name}">
+            <span>Name: ${character.name}</span>
+            <span>Status: ${character.status}</span>
+            <span>Species: ${character.species}</span>
+            <span>First Seen: ${character.firstSeen}</span>
+            <span>Location: ${character.location}</span>
+        </div>
+    `;
+}
 
 // esta función deberá obtener todos los personajes y deberá agregarles un evento de click
 // cuando se seleccione un personaje debe decir hola soy 'nombre personaje', recuerda que puedes obtener
